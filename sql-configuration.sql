@@ -1,8 +1,8 @@
 -- Create the database
-CREATE DATABASE db_fernandez_capstone;
+CREATE DATABASE db_batch5_bms;
 
 -- Use the created database
-USE db_fernandez_capstone;
+USE db_batch5_bms;
 
 -- Create users table
 
@@ -14,6 +14,15 @@ CREATE TABLE Customer (
     Phone VARCHAR(20),
     Address VARCHAR(200)
 );
+CREATE TABLE Users (
+  user_id INT AUTO_INCREMENT PRIMARY KEY,
+  full_name VARCHAR(100) NOT NULL,
+  email VARCHAR(100) UNIQUE NOT NULL,
+  password VARCHAR(100) TEXT NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+INSERT INTO Users(full_name,email,password,)
+VALUES ('aivan','gmail@aivan','123456789');
 
 -- Create Account table
 CREATE TABLE Account (
